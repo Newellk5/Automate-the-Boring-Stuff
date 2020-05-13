@@ -1,0 +1,26 @@
+import random
+flips = int(input('Enter the number of flips: '))
+streak = int(input('Enter the number in a streak: '))
+setsnum = int(input('Enter the number of sets: '))
+numberOfStreaks = 0
+sets = 0
+for experimentNumber in range(setsnum):
+    #Code that creates a list of 100 'heads' or 'tails' values
+    list = []
+    for i in range(0,flips):
+        coin = random.randint(0,1)
+        list.append(coin)
+
+
+#Code that checks if there is a streak of 6 heads or tails in a row
+
+for sets in range(0,setsnum):
+    for i in range(0,flips-streak):
+        run=list[i:i+streak]
+        if sum(run) == streak:
+            numberOfStreaks += 1
+        if sum(run) == 0:
+            numberOfStreaks += 1
+    sets +=1
+
+print(numberOfStreaks)
