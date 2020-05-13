@@ -13,7 +13,7 @@ for experimentNumber in range(setsnum):
 
 #Code that checks if there is a streak of 6 heads or tails in a row
 
-for sets in range(0,setsnum):
+for a in range(0,setsnum):
     for i in range(0,flips-streak):
         run=list[i:i+streak]
         if sum(run) == streak:
