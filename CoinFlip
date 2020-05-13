@@ -3,7 +3,7 @@ flips = int(input('Enter the number of flips: '))
 streak = int(input('Enter the number in a streak: '))
 setsnum = int(input('Enter the number of sets: '))
 numberOfStreaks = 0
-sets = 0
+
 for experimentNumber in range(setsnum):
     #Code that creates a list of 100 'heads' or 'tails' values
     list = []
@@ -21,6 +21,8 @@ for sets in range(0,setsnum):
             numberOfStreaks += 1
         if sum(run) == 0:
             numberOfStreaks += 1
-    sets +=1
+
 
 print(numberOfStreaks)
+
+print('Chance of streak: %s%%' % (numberOfStreaks / 100))
